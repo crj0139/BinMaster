@@ -1,2 +1,5 @@
 __pycache__/
-
+test.s.bam
+test.s.bam.bai
+*_averaged.txt
+contig_lengths.txt
