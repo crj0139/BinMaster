@@ -1,6 +1,6 @@
-# BinMaster Toolset
+# Gen-Bin Toolset
 
-## BinMaster
+## Gen-Bin
 
 Finds cumulative bases of any feature in a given bin size of a chromosome/contig.
 
@@ -8,7 +8,7 @@ Finds cumulative bases of any feature in a given bin size of a chromosome/contig
 #### Usage
 
 ```
-python BinMaster.py -f <feature_type> -b 50000 -o <output_file> -i <input_gff> [--remove_feat]
+python Gen-Bin.py -f <feature_type> -b 50000 -o <output_file> -i <input_gff> [--remove_feat]
     -f, --feature = Feature type to bin
     -b, --bin_size = Bin size desired along chromosome/contig
     -o, --output_file = output file, .txt works
@@ -17,7 +17,7 @@ python BinMaster.py -f <feature_type> -b 50000 -o <output_file> -i <input_gff> [
 ```
 Where <feature_type> is the feature generally in column 3 of a .gff file.
 
-For example, running BinMaster on this .gff file:
+For example, running Gen-Bin on this .gff file:
 ```
 chr1    .       contig  1       69837        .       .       .       ID=xyz
 chr1    maker   gene    18497   19129   .       +       .       ID=xyz
@@ -35,7 +35,7 @@ chr1    maker   exon    42008   42206   .       +       .       ID=xyz
 ```
 using:
 ```
-BinMaster.py -f gene -b 20000 -o output_test.txt -i input.gff
+Gen-Bin.py -f gene -b 20000 -o output_test.txt -i input.gff
 ```
 will give the output:
 ```
@@ -57,15 +57,15 @@ chr1	40000	60000	707
 
 
 
-## BinMaster_intcov
+## Gen-Bin_intcov
 
 Calculates average read coverage over all intervals of user-specified length.
 
 
 #### Usage
 ```
-BinMaster_intcov.py -i <input_bam_file> -intv <bin_size> -t <threads> -o <output_prefix>
-	-i = input bam file (if not indexed as .bam.bai first, BinMaster_intcov will do it for you)
+Gen-Bin_intcov.py -i <input_bam_file> -intv <bin_size> -t <threads> -o <output_prefix>
+	-i = input bam file (if not indexed as .bam.bai first, Gen-Bin_intcov will do it for you)
 	-intv = interval size over which to calculate average coverages
 	-t = threads, used for samtools
 	-o = output prefix
