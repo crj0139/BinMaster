@@ -51,6 +51,12 @@ chr1	20000	39999	272
 chr1	40000	60000	707
 ```
 
+
+
+
+
+
+
 ## BinMaster_intcov
 
 Calculates average read coverage over all intervals of user-specified length.
