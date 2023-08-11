@@ -1,4 +1,6 @@
-# BinMaster
+# BinMaster Toolset
+
+## BinMaster
 
 Finds cumulative bases of any feature in a given bin size of a chromosome/contig.
 
@@ -48,3 +50,30 @@ chr1	0	19999	632
 chr1	20000	39999	272
 chr1	40000	60000	707
 ```
+
+## BinMaster_intcov
+
+Calculates average read coverage over all intervals of user-specified length.
+
+
+#### Usage
+```
+BinMaster_intcov.py -i <input_bam_file> -intv <bin_size> -t <threads> -o <output_prefix>
+	-i = input bam file (if not indexed as .bam.bai first, BinMaster_intcov will do it for you)
+	-intv = interval size over which to calculate average coverages
+	-t = threads, used for samtools
+	-o = output prefix
+```
+
+The output filename will be in format <output_prefix>_<contig_name>_averaged.txt, and a separate output will be 
+made for all contigs.
+
+The output file is formatted as so:
+```
+chr1	1	50000	90.01
+chr1	50001	100000	34.58
+chr1	100001	150000	30.00
+chr1	150001	200000	90.62...
+```
+Where for this example, -intv of 50000 was used.  The fourth column contains the average read depth over that
+entire interval, based on depth per individual nucleotide averaged over that interval.
