@@ -3,3 +3,6 @@ test.s.bam
 test.s.bam.bai
 *_averaged.txt
 contig_lengths.txt
+*.bam
+*.gff
+*.bam.bai

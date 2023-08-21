@@ -45,7 +45,7 @@ if __name__ == "__main__":
     main()
 
 
-# python BinMaster.py -f gene -b 50000 -o 50k_genes.txt -i rnd2_genes.gff #--remove_feat
+# python Gen-Bin.py -f gene -b 50000 -o 50k_genes.txt -i rnd2_genes.gff #--remove_feat
 
 #chr1    .       contig  1       69837        .       .       .       ID=xyz
 #chr1    maker   gene    18497   19129   .       +       .       ID=xyz
@@ -61,7 +61,7 @@ if __name__ == "__main__":
 #chr1    maker   exon    41499   41938   .       +       .       ID=xyz
 #chr1    maker   exon    42008   42206   .       +       .       ID=xyz
 
-#An example of what the result of this program will be when run with "BinMaster.py -f gene -b 20000 -o output_test.txt -i input.gff":
+#An example of what the result of this program will be when run with "Gen-Bin.py -f gene -b 20000 -o output_test.txt -i input.gff":
 #chr1	gene	0	19999	632
 #chr1	gene	20000	39999	272
 #chr1	gene	40000	60000	707

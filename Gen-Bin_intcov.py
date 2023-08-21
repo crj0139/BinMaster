@@ -99,7 +99,7 @@ def main():
         print("An error occurred:", e)
 
 # Template shell command
-# BinMaster_intcov.py -i <input_bam_file> -intv <bin_size> -t <threads> -o <output_prefix>
+# Gen-Bin_intcov.py -i <input_bam_file> -intv <bin_size> -t <threads> -o <output_prefix>
 
 if __name__ == "__main__":
     main()
@@ -107,6 +107,5 @@ if __name__ == "__main__":
 
 
 
-#./BinMaster_intcov.py -i test.s.bam -intv 50000 -o test.txt -t 2
-
+#./Gen-Bin_intcov.py -i test.s.bam -intv 50000 -o test.txt -t 2
 
