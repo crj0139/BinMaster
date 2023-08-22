@@ -6,3 +6,6 @@ contig_lengths.txt
 *.bam
 *.gff
 *.bam.bai
+*.blocked.txt
+*.links.txt
+*gencov.txt
