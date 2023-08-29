@@ -89,23 +89,20 @@ entire interval, based on depth per individual nucleotide averaged over that int
 
 ## Gen-Bin_syntenicblocker.py
 
-Calculates how many syntenic blocks exist within an interval of given size.
+Merges syntenic blocks within <max_gap> bp.
 
 #### Usage
 ```
-python Gen-Bin_syntenicblocker.py -i <links.txt> -intv <bin_size> -o <output.txt>
+python Gen-Bin_syntenicblocker.py -i <links.txt> -intv <bin_size> -o <output.txt> [-c <max_gap>]
 	-i = input links file, in CIRCOS format like this:
-		chr13	2590981	2591305	chr7	11460609	11460928
-		chr13	2591358	2591516	chr7	11461055	11461203
-		chr13	2592109	2592395	chr7	11461818	11462104
-		chr13	2592440	2592988	chr7	11462152	11462700
-		chr13	2592975	2593144	chr7	11462776	11462945
-		chr13	2593178	2593617	chr7	11462985	11463428
-	-intv = interval size over which the number of links will be counted.
+		chr13	4642859	4643083	chr1	22978784	22978560
+		chr13	4733266	4733748	chr1	22930448	22929966
+		chr13	20196438	20196706	chr1	3873148	3872880
+		chr13	10211545	10211861	chr2	56884286	56883970
+		chr13	20746586	20746754	chr3	6066140	6065972
+		*note: make sure column 5 and 6 are ascending/descending as needed for strand orientation
 	-o = output file 
+	-c = <max_gap>, corresponding to max gap size allowed between merged blocks
 ```
-The output if -intv is set to 1000000 would therefore be:
-```
-chr13 2000001 3000000 chr7 11000001 12000000 6
-```
+
 Where in the last column is the number of links counted (or syntenic blocks)
