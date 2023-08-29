@@ -83,3 +83,29 @@ chr1	150001	200000	90.62...
 ```
 Where for this example, -intv of 50000 was used.  The fourth column contains the average read depth over that
 entire interval, based on depth per individual nucleotide averaged over that interval.
+
+
+
+
+## Gen-Bin_syntenicblocker.py
+
+Calculates how many syntenic blocks exist within an interval of given size.
+
+#### Usage
+```
+python Gen-Bin_syntenicblocker.py -i <links.txt> -intv <bin_size> -o <output.txt>
+	-i = input links file, in CIRCOS format like this:
+		chr13	2590981	2591305	chr7	11460609	11460928
+		chr13	2591358	2591516	chr7	11461055	11461203
+		chr13	2592109	2592395	chr7	11461818	11462104
+		chr13	2592440	2592988	chr7	11462152	11462700
+		chr13	2592975	2593144	chr7	11462776	11462945
+		chr13	2593178	2593617	chr7	11462985	11463428
+	-intv = interval size over which the number of links will be counted.
+	-o = output file 
+```
+The output if -intv is set to 1000000 would therefore be:
+```
+chr13 2000001 3000000 chr7 11000001 12000000 6
+```
+Where in the last column is the number of links counted (or syntenic blocks)

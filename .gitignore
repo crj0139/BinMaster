@@ -9,3 +9,6 @@ contig_lengths.txt
 *.blocked.txt
 *.links.txt
 *gencov.txt
+*all.txt
+*links.txt
+*M.txt
